@@ -89,21 +89,26 @@ a:hover{
     padding-left: 80px;
     z-index: 3;
 }
-.body_homepage .div-text{
+.body_homepage .div-text-home{
     padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.body_homepage .result_recommendations{
+.body_homepage #result_recommendations{
     padding-right: 90px;
 }
-.body_homepage .result_recommendations .result_recommendation{
+.body_homepage #result_recommendations #result_recommendation{
     background-color: antiquewhite;
     color: black;
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.body_homepage .result_recommendations .result_recommendation img{
+.body_homepage #result_recommendations #result_recommendation img{
     width: 200px;
 }
-.body_homepage .result_recommendations .result_recommendation p{
+.body_homepage #result_recommendations #result_recommendation p{
     font-size: 14px;
 }
 
@@ -157,6 +162,7 @@ main{
     width: 40%;
     gap: 18px;
     z-index: 3;
+    margin-top: 20px;
     padding-top: 30px;
     backdrop-filter: blur(7px);
     padding: 20px;
@@ -166,6 +172,15 @@ main{
     background-color: bisque;
     border: none;
     border-radius: 6px;
+}
+
+.div-text-contact{
+    padding-left: 0;
+    z-index: 3;
+    color: white; 
+    padding-left: 100px;
+    padding-right: 60px;
+    padding-top: 100px;
 }
 
 .body_contact form button:hover{
@@ -189,3 +204,21 @@ main{
     background-color: white;
     border-radius: 6px;
  }
+
+ 
+/* --------------
+*   Page about
+* ---------------
+*/
+
+.div-text-about{
+    z-index: 3;
+    color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+}
