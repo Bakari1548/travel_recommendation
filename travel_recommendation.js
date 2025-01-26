@@ -1,6 +1,9 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnClear = document.getElementById('btnClear');
+const results = document.getElementById("result_recommendations")
 
 btnSearch.addEventListener('click',searchCondition);
+btnClear.addEventListener('click', resetForm);
 
 
 function searchCondition() {
@@ -8,7 +11,6 @@ function searchCondition() {
     // const resultTitle = document.getElementById('resultTitle');
     // const resultText = document.getElementById('resultText');
     // const resultImage = document.getElementById('resultImage');
-    const results = document.getElementById("result_recommendations")
     const result = document.getElementById("result_recommendation")
     result.innerHTML = ''
 
@@ -36,8 +38,13 @@ function searchCondition() {
                     // result.innerHTML += `<p id="resultText">${dataRecommendation.cities[i].description}</p>`
                 console.log(result)
             }else{
-                console.log("Not found ");
-                console.log(dataRecommendation);
-            }
+                    results.innerHTML += `<div id="result_recommendation" style="padding: 20px;">
+                                            <p id= "resultText">Not Found</p>
+                                            </div>`}
     })
+}
+
+function resetForm() {
+    // const results = document.getElementById("result_recommendations")
+        results.innerHTML = ""
 }
